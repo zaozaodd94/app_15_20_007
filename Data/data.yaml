@@ -1,0 +1,57 @@
+#name: "lili" # 冒号必须是英文格式，每个冒号后必须跟空格
+#Name: "nana"
+#--对象——-
+#data: {"name": "lili","pwd": "123"}
+#
+#data1:
+#  name: "lili"
+#  pwd: "1234"
+#yaml文件格式
+#data2:
+#  - "lili"  #短横线+空格+列表需要存储值
+#  - "nana"
+#data3: ["123","456"]
+
+#{"key":[{key:value},{key:value}]} -json
+#data4:
+#  - name: "lili"
+#  - pwd: "123"
+
+#字符串 特殊情况 会在工作总看到 自动转换一部分数据类型
+#name: lili
+#布尔-yaml格式
+#bool1: true
+#bool2: false
+
+#布尔-python格式
+#bool3: True
+#bool4: False
+
+#整数 浮点数
+#int1: 122
+#floatl: 12889
+
+#空类型
+#yaml格式
+#data8: ~
+##python格式
+#data9: None #返回的是一个字符串"None",不支持,大小写也不支持
+#data:none 支持
+#data10: null #大小写都支持
+#data11:
+
+#日期类型
+#date1: 2020-06-05 11:11:11
+#date2: 1999-01-01
+#date3: 12:04:09 #f返回的是一串数字 尽量以字符串的形编写
+#特殊日期类型 为个位数
+#date4: 2020-06-03
+#date5: 2020-06-12 02:02:02
+
+info: &data
+  name: "lll"
+  phone: "132456"
+
+addr:
+  <<: *data
+  detail: "江宁大道"
